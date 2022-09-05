@@ -27,7 +27,9 @@ INVARIANT
     //Alimentar usando set comprehension
     // 
     fishes : FISH_ID +-> struct (f_species: FISH_SPECIES, sex : SEX)
+    & fishes : FIN(fishes)
     & algae : ALGAE_ID +-> struct (a_species: ALGAE_SPECIES)
+    & algae : FIN(algae)
     & light : LIGHT_MODE +-> NAT
     & aquarium_cycle : NATURAL
     & card(dom(fishes)) <= MAX_FISH
